@@ -1,1 +1,27 @@
+import math
+
+class Punto:
+    def __init__(self, x=0, y=0):
+        self.x = x
+        self.y = y
+
+    def eje_x(self):
+        return self.x
+
+    def eje_y(self):
+        return self.y
+
+    def impresion(self):
+        return f"({self.x}, {self.y})"
+
+    def opuesto(self):
+        return Punto(-self.x, -self.y)
+
+    def distancia_a(self, otro):
+        dx = self.x - otro.x
+        dy = self.y - otro.y
+        return math.sqrt(dx**2 + dy**2)
+
+    def es_igual_a(self, otro):
+        return self.x == otro.x and self.y == otro.y
 
